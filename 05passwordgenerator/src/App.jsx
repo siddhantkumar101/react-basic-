@@ -3,32 +3,31 @@ import { useState, useCallback, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [length, setlength] = useState(8)
-  const [numberallowed, setnumberallowed] = useState(false)
-  const [specialallowed, setspecialallowed] = useState(false)
+  const [length, setlength] = useState(12)
+  const [numberallowed, setnumberallowed] = useState(true)
+  const [specialallowed, setspecialallowed] = useState(true)
   const [password, setpassword] = useState('')
 
-  const passwordgenerator = useCallback(() => {
-    let pass = ""
-    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-
-    if (numberallowed) str += "0123456789"
-    if (specialallowed) str += "!@#$%^&*()_+{}|:<>?-=[];',./`~"
-
-    for (let i = 0; i < length; i++) {
-      const char = Math.floor(Math.random() * str.length)
-      pass += str.charAt(char)
+  const generatepassword = useCallback(() => {
+    let chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    if (numberallowed) {
+      chars += '0123456789'
+    }
+    if (specialallowed) {
+      chars += '!@#$%^&*()_+~`|}{[]:;?><,./-='
     }
 
-    setpassword(pass)
+    let generatedpassword = ''
+    for (let i = 0; i < length; i++) {
+      const randomindex = Math.floor(Math.random() * chars.length)
+      generatedpassword += chars[randomindex]
+    }
+    setpassword(generatedpassword)
+  }, [length, numberallowed, specialallowed])
 
-  }, [numberallowed, specialallowed, length])
   useEffect(() => {
-  passwordgenerator()
-}, [passwordgenerator])
-
-
-
+    generatepassword()
+  }, [generatepassword])    
   return (
     <>
       <>
