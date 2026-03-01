@@ -29,9 +29,9 @@ function App() {
   return (
     <div
   className="w-full h-screen flex justify-center items-center bg-cover bg-center"
-  style={{
-    backgroundImage: image,
-  }}
+style={{
+  backgroundImage: `url(${image})`,
+}}
 >
 
       <div className="w-full max-w-md mx-auto border rounded-lg p-5 backdrop-blur-sm bg-white/30">
