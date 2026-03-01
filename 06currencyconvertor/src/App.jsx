@@ -29,7 +29,7 @@ function App() {
     <div
   className="w-full h-screen flex justify-center items-center bg-cover bg-center"
   style={{
-    backgroundImage: `url('https://images.pexels.com/photos/4828041/pexels-photo-4828041.jpeg')`,
+    backgroundImage: `url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fmoney-converter&psig=AOvVaw0DycqKZZ4NkfjkWRwxf-kS&ust=1772452010457000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLCsj7TQ_pIDFQAAAAAdAAAAABAEhttps://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fmoney-converter&psig=AOvVaw0DycqKZZ4NkfjkWRwxf-kS&ust=1772452010457000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLCsj7TQ_pIDFQAAAAAdAAAAABAE')`,
   }}
 >
 
